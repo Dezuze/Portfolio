@@ -3,4 +3,5 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@vueuse/nuxt','@nuxtjs/tailwindcss','nuxt-primevue',],
   css: [ '~/assets/css/main.css',],
+  compatibilityDate: '2024-07-25',
 })
