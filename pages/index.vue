@@ -7,7 +7,7 @@
                     <forms class="flex flex-col w-full mt-5" autocomplete="on" action="action.py" method="post">
                         <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="email" id="email" placeholder="Email" required>
                         <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="password" id="password" name="password" placeholder="Password" required>
-                        <button class="border-slate-300 border-2 mx-20 mt-5 bg-slate-200 rounded-3xl text-slate-800 placeholder:text-white text-center hover:bg-transparent hover:text-white  duration-500 ease-linear" value="login">Login</button>
+                        <button class="border-slate-300 border-2 mx-20 mt-5 bg-slate-200 rounded-3xl text-slate-800 placeholder:text-white text-center hover:bg-transparent hover:text-white  duration-500 ease-in-out hover:-translate-y-1 hover:scale-110" value="login">Login</button>
                     </forms>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                 </linearGradient>
                 </defs>
               </svg>
-              <button id="Sign-up" class="sign-up flex w-100 hover:shadow-xl focus:shadow-none w-fit h-fit mt-2 items-center text-white border-4 rounded-3xl font-bold text-xl font-sans" @click="toggleColumns">
+              <button id="Sign-up" class="sign-up ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 flex w-100 hover:shadow-xl focus:shadow-none w-fit h-fit mt-2 items-center text-white border-4 rounded-3xl font-bold text-xl font-sans" @click="toggleColumns">
                   <span class="pl-2" v-if="swap">{{ textDiv }}</span>
                   <span class="-ml-2" v-if="swap"><svg width="50px" height="50px" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -80,7 +80,7 @@
                     <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="password" id="password1" name="password" placeholder="Password" required>
                     <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="password" id="comfirm-password" placeholder="Comfirm Password" name="confirm-password" required>
                     <span id="error-message" class="error-message"></span>
-                    <button class="justify-self-center border-slate-300 border-2 mx-20 mt-5 bg-slate-200 rounded-3xl text-slate-800 placeholder:text-white text-center hover:bg-transparent hover:text-white duration-500 ease-linear" value="Signup">Sign Up</button>
+                    <button class="justify-self-center border-slate-300 border-2 mx-20 mt-5 bg-slate-200 rounded-3xl text-slate-800 placeholder:text-white text-center hover:bg-transparent hover:text-white duration-500 ease-in-out hover:-translate-y-1 hover:scale-110" value="Signup">Sign Up</button>
                 </forms>
             </div>
         </div>
