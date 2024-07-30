@@ -83,14 +83,7 @@
               </div>
               
           </div>
-          <!-- <a class="flex items-center justify-center w-full h-16 mt-auto bg-gray-800 hover:bg-gray-700 hover:text-gray-300" href="#" @click="accdrop">
-              <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span class="ml-2 text-sm font-medium">Account</span>
-          </a>
-      <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
-      </div>
+        </div>
       <div class="row-span-full col-start-2 col-end-12 max-h-screen bg-gray-900 text-gray-400">
           <div class="flex justify-end w-full px-2">
               <div class="mt-4">
@@ -126,3 +119,7 @@
 </div>
 </div>
 </template>
+<script setup>
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+import { ChevronUpIcon } from '@heroicons/vue/20/solid'
+</script>
