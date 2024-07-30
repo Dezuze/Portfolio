@@ -1,7 +1,7 @@
 <template>
     <div class="grid max-h-screen min-h-screen overflow-hidden">
       <div class="row-span-full col-start-1 col-end-2 flex flex-col items-center text-gray-400 bg-gray-800 min-h-screen">
-          <a class="flex items-center w-full px-3 mt-3" href="#">
+          <a class="flex items-center w-full px-3 mt-3" href="/main">
               <svg width="100" height="100.57" viewBox="0 0 350 352" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_d_9_2)">
                   <circle cx="175" cy="173" r="171" fill="#36FF32"/>
