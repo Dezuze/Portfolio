@@ -1,7 +1,7 @@
 <template>
   <div class="grid max-h-screen min-h-screen overflow-hidden">
-    <div class="row-span-full col-start-1 col-end-2 flex flex-col items-center text-gray-400 bg-gray-800 min-h-screen">
-		<a class="flex items-center w-full px-3 mt-3" href="/main"">
+    <div class="row-span-full  col-start-1 col-end-2 flex flex-col items-center text-gray-400 bg-gray-800 min-h-screen shadow-2xl shadow-white-500/50 mix-blend-plus-darker">
+		<a class="flex items-center w-full px-3 mt-3" href="/main">
 			<svg width="100" height="100.57" viewBox="0 0 350 352" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g filter="url(#filter0_d_9_2)">
 				<circle cx="175" cy="173" r="171" fill="#36FF32"/>
@@ -101,7 +101,7 @@
 				</MenuButton>
 				</div>
 				<transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-				<MenuItems class="absolute mr-2 z-10 w-30 origin-top-right rounded-md text-white bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hover:bg-black hover:text-black">
+				<MenuItems class="absolute mr-2 z-10 w-100% origin-top rounded-md text-white bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hover:bg-black hover:text-black">
 					<div class="py-1">
 					<MenuItem v-slot="{ active }">
 						<a href="#" :class="[active ? 'hover:bg-gray-700 hover:text-gray-300' : 'text-white', 'block px-4 py-2 text-sm']">Settings</a>
@@ -142,7 +142,11 @@
 	</div>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronUpIcon } from '@heroicons/vue/20/solid'
+
+useHead({
+  title: 'Dashboard'
+})
 </script>

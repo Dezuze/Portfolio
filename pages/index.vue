@@ -2,7 +2,7 @@
   <div class="body h-screen">
           <div :class="showThird ? 'show-third container' : 'container'">
             <div class="column column-1">
-                <h2 class="text-white font-bold text-3xl font-sans text-center">Sign In</h2><br>
+                <h2 class="text-white font-bold text-3xl font-sans text-center">Sign In</h2>
                 <div class="h-full gap-5 mt-5 p-4">
                     <forms class="flex flex-col w-full mt-5" autocomplete="on" action="action.py" method="post">
                         <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="email" id="email" placeholder="Email" required>
@@ -73,8 +73,8 @@
                 
             </div>
             <div class="column column-3">
-                <h2 class="text-white font-bold text-3xl font-sans text-center">Sign Up</h2><br>
-                <forms class="flex flex-col w-full mt-5" id="signup-form" aria-autocomplete="on" action="action.py" method="post">
+                <h2 class="text-white font-bold text-3xl font-sans text-center">Sign Up</h2>
+                <forms class="flex flex-col w-full mt-9" id="signup-form" aria-autocomplete="on" action="action.py" method="post">
                     <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="text" id="username" placeholder="Username" name="username" required>
                     <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="email" id="email" placeholder="Email" required>
                     <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="password" id="password1" name="password" placeholder="Password" required>
@@ -106,6 +106,10 @@ const toggleColumns = () => {
   }
 return {showThird,textDiv};
 };
+
+const Loginbtn = () =>{
+
+}
 </script>
 
 

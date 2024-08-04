@@ -92,7 +92,7 @@
               </div>
               <Menu as="div" >
                   <div>
-                  <MenuButton class="flex align-bottom items-center ml-2 justify-center w-full h-14 hover:bg-gray-900 hover:text-gray-300">
+                  <MenuButton class="flex align-bottom items-center mx-2 justify-center w-full h-14 hover:bg-gray-900 hover:text-gray-300">
                       <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
@@ -101,7 +101,7 @@
                   </MenuButton>
                   </div>
                   <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-                  <MenuItems class="absolute mr-2 z-10 w-30 origin-top-right rounded-md text-white bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hover:bg-black hover:text-black">
+                  <MenuItems class="absolute mr-2 z-10 w-32 origin-top-right rounded-md text-white bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hover:bg-black hover:text-black">
                       <div class="py-1">
                       <MenuItem v-slot="{ active }">
                           <a href="#" :class="[active ? 'hover:bg-gray-700 hover:text-gray-300' : 'text-white', 'block px-4 py-2 text-sm']">Settings</a>
@@ -119,7 +119,11 @@
 </div>
 </div>
 </template>
-<script setup>
+
+<script lang="ts" setup >
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronUpIcon } from '@heroicons/vue/20/solid'
+useHead({
+  title: 'Transactions'
+})
 </script>

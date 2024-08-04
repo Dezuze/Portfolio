@@ -119,7 +119,10 @@
 </div>
 </div>
 </template>
-<script setup>
+<script setup lang="ts">
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronUpIcon } from '@heroicons/vue/20/solid'
+useHead({
+  title: 'Analytics'
+})
 </script>
