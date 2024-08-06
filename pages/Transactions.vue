@@ -105,7 +105,7 @@
                   <MenuItems class="absolute mr-2 z-10 w-32 origin-top-right rounded-md text-white bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hover:bg-black hover:text-black">
                       <div class="py-1">
                       <MenuItem v-slot="{ active }">
-                          <a href="#" :class="[active ? 'hover:bg-gray-700 hover:text-gray-300' : 'text-white', 'block px-4 py-2 text-sm']">Settings</a>
+                          <a href="/settings" :class="[active ? 'hover:bg-gray-700 hover:text-gray-300' : 'text-white', 'block px-4 py-2 text-sm']">Settings</a>
                       </MenuItem>
                       <form method="POST" action="#">
                           <MenuItem v-slot="{ active }">
@@ -116,9 +116,34 @@
                   </MenuItems>
                   </transition>
               </Menu>
-</div>
-</div>
-</div>
+            </div>
+            <div class="justify-center ">
+                <p>Add New Transaction</p>
+                <form method="POST" action="#">
+                    <label for="Title for the new transaction">Title</label>
+                    <input type="text" id="trnstitle" name="title">
+                    <label for="Type of Transaction">Type of Transaction</label>
+                    <input type="text" list="Transactions">
+                    <datalist id="Transactions">
+                        <option>Groceries</option>
+                        <option>Shopping</option>
+                        <option>Salary</option>
+                        <option>Medication</option>
+                    </datalist><br>
+                    <label for="Amount">Amount of transaction</label>
+                    <input type="number" id="Amount" name="Amount" min="1" step="0.01" placeholder="0.00">
+                    <input type="radio" id="Credit" name="C/D" value="Credit">
+                    <label for="Credit">Credit</label>
+                    <input type="radio" id="Debit" name="C/D" value="Debit">
+                    <label for="Debit">Debit</label><br>
+                    <label for="Descriptiion">Description</label>
+                    <textarea id="description" name="Description" rows="5" cols="50">
+                        Description of the transaction
+                    </textarea>
+                </form>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script lang="ts" setup >

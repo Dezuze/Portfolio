@@ -1,6 +1,6 @@
-// server/api/users/index.ts
+/* // server/api/users/index.ts
 import { defineEventHandler } from 'h3';
-import { mysql } from '../db/index';
+import { mysql } from '../db/index.ts';
 
 export default defineEventHandler(async (event) => {
   const { username, password } = await event.context.body;
@@ -16,4 +16,4 @@ export default defineEventHandler(async (event) => {
     // Return an error response
     return {  success: true, message: 'Login successful'};
   }
-});
+}); */

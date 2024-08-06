@@ -1,6 +1,6 @@
 <template>
   <div class="grid max-h-screen min-h-screen overflow-hidden">
-    <div class="row-span-full  col-start-1 col-end-2 flex flex-col items-center text-gray-400 bg-gray-800 min-h-screen shadow-2xl shadow-white-500/50 mix-blend-plus-darker">
+    <div class="row-span-full  col-start-1 col-end-2 flex flex-col items-center text-gray-400 bg-gray-800 min-h-screen shadow-2xl shadow-white">
 		<a class="flex items-center w-full px-3 mt-3" href="/main">
 			<svg width="100" height="100.57" viewBox="0 0 350 352" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_9_2)">
@@ -93,7 +93,7 @@
 			</div>
 			<Menu as="div" >
 				<div>
-				<MenuButton class="flex align-bottom items-center ml-2 justify-center w-full h-14 hover:bg-gray-900 hover:text-gray-300">
+				<MenuButton class="flex align-bottom items-center mx-2 justify-center w-full h-14 hover:bg-gray-900 hover:text-gray-300">
 					<svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
 					</svg>
@@ -102,7 +102,7 @@
 				</MenuButton>
 				</div>
 				<transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-				<MenuItems class="absolute mr-2 z-10 w-100% origin-top rounded-md text-white bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hover:bg-black hover:text-black">
+				<MenuItems class="absolute mr-2 z-10 w-32 origin-top rounded-md text-white bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hover:bg-black hover:text-black">
 					<div class="py-1">
 					<MenuItem v-slot="{ active }">
 						<a href="#" :class="[active ? 'hover:bg-gray-700 hover:text-gray-300' : 'text-white', 'block px-4 py-2 text-sm']">Settings</a>
