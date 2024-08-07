@@ -49,8 +49,7 @@
 <stop offset="0.515" stop-color="#2B9029"/>
 </linearGradient>
 </defs>
-</svg>
-
+            </svg>
               <span class="ml-2 text-sm font-bold">Fund Fusion</span>
           </a>
           <div class="w-full h-full px-2">
@@ -86,7 +85,7 @@
           </div>
           </div>
       <div class="row-span-full col-start-2 col-end-12 max-h-screen bg-gray-900 text-gray-400">
-          <div class="flex justify-end w-full px-2">
+            <div class="flex justify-end w-full px-2">
               <div class="mt-4">
                   <span class="content-center text-sm font-bold px-2">Account Balance</span>
                   <input type="text" id="dynamicTextField" class="border-4 border-white rounded-full w-auto text-center " placeholder="Fetching data...">
@@ -105,7 +104,7 @@
                   <MenuItems class="absolute mr-2 z-10 w-32 origin-top-right rounded-md text-white bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hover:bg-black hover:text-black">
                       <div class="py-1">
                       <MenuItem v-slot="{ active }">
-                          <a href="#" :class="[active ? 'hover:bg-gray-700 hover:text-gray-300' : 'text-white', 'block px-4 py-2 text-sm']">Settings</a>
+                          <a href="/settings" :class="[active ? 'hover:bg-gray-700 hover:text-gray-300' : 'text-white', 'block px-4 py-2 text-sm']">Settings</a>
                       </MenuItem>
                       <form method="POST" action="#">
                           <MenuItem v-slot="{ active }">
@@ -116,9 +115,34 @@
                   </MenuItems>
                   </transition>
               </Menu>
-</div>
-</div>
-</div>
+            </div>
+            <div class="mx-12 my-6 col-start-3 col-end-11 ">
+                <div class="text-3xl font-bold font-sans text-white">
+                    <p>Loans</p>
+                </div>
+                <div class="w-full">
+                    <form class="grid col-start-4 col-end-10 gap-3 text-nowrap text-white font-sans font-semibold mx-12 mt-12 justify-center" method="post" id="Loans" action="#">
+                        <div class="flex col-start-1 col-end-10 justify-stretch ">
+                        <div class="flex gap-4 w-1/2 mr-4">
+                            <label for="Title for the new Loan">Title</label>
+                            <input class="w-full bg-slate-500 rounded-md p-1 px-1" type="text" name="title" required>
+                        </div>
+                        <div class="flex gap-4 w-1/2">
+                            <label for="Type of Loans">Type of Loans</label>
+                            <input class="w-full bg-slate-500 rounded-md p-1 px-1" type="text" list="Loans" required>
+                            <datalist id="Loans">
+                                <option>Education</option>
+                                <option>Car</option>
+                                <option>Property</option>
+                                <option>House</option>
+                            </datalist>
+                        </div>
+                    </div>
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">

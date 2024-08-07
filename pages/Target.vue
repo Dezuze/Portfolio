@@ -105,7 +105,7 @@
                   <MenuItems class="absolute mr-2 z-10 w-32 origin-top-right rounded-md text-white bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hover:bg-black hover:text-black">
                       <div class="py-1">
                       <MenuItem v-slot="{ active }">
-                          <a href="#" :class="[active ? 'hover:bg-gray-700 hover:text-gray-300' : 'text-white', 'block px-4 py-2 text-sm']">Settings</a>
+                          <a href="/settings" :class="[active ? 'hover:bg-gray-700 hover:text-gray-300' : 'text-white', 'block px-4 py-2 text-sm']">Settings</a>
                       </MenuItem>
                       <form method="POST" action="#">
                           <MenuItem v-slot="{ active }">
