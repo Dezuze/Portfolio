@@ -121,9 +121,9 @@
                 <p>Add New Transaction</p>
                 <form method="POST" action="#">
                     <label for="Title for the new transaction">Title</label>
-                    <input type="text" id="trnstitle" name="title">
+                    <input type="text" id="trnstitle" name="title" required>
                     <label for="Type of Transaction">Type of Transaction</label>
-                    <input type="text" list="Transactions">
+                    <input type="text" list="Transactions" required>
                     <datalist id="Transactions">
                         <option>Groceries</option>
                         <option>Shopping</option>
@@ -131,13 +131,13 @@
                         <option>Medication</option>
                     </datalist><br>
                     <label for="Amount">Amount of transaction</label>
-                    <input type="number" id="Amount" name="Amount" min="1" step="0.01" placeholder="0.00">
-                    <input type="radio" id="Credit" name="C/D" value="Credit">
+                    <input type="number" id="Amount" name="Amount" min="1" step="0.01" placeholder="0.00" required>
+                    <input type="radio" id="Credit" name="C/D" value="Credit" required>
                     <label for="Credit">Credit</label>
-                    <input type="radio" id="Debit" name="C/D" value="Debit">
+                    <input type="radio" id="Debit" name="C/D" value="Debit" required>
                     <label for="Debit">Debit</label><br>
                     <label for="Descriptiion">Description</label>
-                    <textarea id="description" name="Description" rows="5" cols="50">
+                    <textarea id="description" name="Description" rows="5" cols="50" required>
                         Description of the transaction
                     </textarea>
                 </form>
