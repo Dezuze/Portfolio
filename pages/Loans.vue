@@ -137,6 +137,22 @@
                                 <option>House</option>
                             </datalist>
                         </div>
+                        <div class="grid">
+                            <label for="Total loan amount">Loan amount</label>
+                            <input type="number">
+                            <label for="intrest rate">Intrest rate</label>
+                            <input type="number">
+                            <label for="Loan term in months">Loan term</label>
+                            <input type="number">
+                            <label for="start date">Start Date</label>
+                            <input type="date">
+                            <label for="Payment date">Due Date</label>
+                            <input type="date">
+                            <label for="outstanding balance">Outstanding balance (optional)</label>
+                            <input type="number">
+                            <label for="description">Description</label>
+                            <input type="textarea">
+                        </div>
                     </div>
                     </form>
                 </div> 
