@@ -75,13 +75,13 @@
             </div>
             <div class="column column-3">
                 <h2 class="text-white font-bold text-3xl font-sans text-center">Sign Up</h2>
-                <forms class="flex flex-col w-full mt-9" id="signup-form" aria-autocomplete="on" action="action.py" method="post">
-                    <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="text" id="username" placeholder="Username" name="username" required>
-                    <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="email" id="email" placeholder="Email" required>
-                    <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="password" id="password1" name="password" placeholder="Password" required>
-                    <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="password" id="comfirm-password" placeholder="Comfirm Password" name="confirm-password" required>
-                    <span id="error-message" class="error-message"></span>
-                    <button class="justify-self-center border-slate-300 border-2 mx-20 mt-5 bg-slate-200 rounded-3xl text-slate-800 placeholder:text-white text-center hover:bg-transparent hover:text-white duration-500 ease-in-out hover:-translate-y-1 hover:scale-110" value="Signup">Sign Up</button>
+                <forms class="flex flex-col w-full mt-9" id="signup-form" aria-autocomplete="on" method="post" @submit.prevent="register" novalidate>
+                    <span v-if="error" class="absolute top-20 left-0 right-0 justify-self-center p-0.5 px-3 rounded-md bg-red-600 text-yellow-400 text-center">{{ error }}</span>
+                    <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="text" name="username" v-model="username" placeholder="Username" required>
+                    <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="email" name="email" v-model="email" placeholder="Email" required>
+                    <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="password" name="password" v-model="password1" placeholder="Password" required>
+                    <input class="border-slate-300 border-2 m-2 bg-transparent rounded-3xl text-white placeholder:text-white text-center" type="password" name="Comfirm Password" v-model="conpass" placeholder="Comfirm Password" required>
+                    <button type="submit" value='register' class="justify-self-center border-slate-300 border-2 mx-20 mt-5 bg-slate-200 rounded-3xl text-slate-800 placeholder:text-white text-center hover:bg-transparent hover:text-white duration-500 ease-in-out hover:-translate-y-1 hover:scale-110">Sign Up</button>
                 </forms>
             </div>
         </div>
@@ -89,13 +89,32 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 import { useState } from '#app';
 import { ref } from 'vue';
+//import {registerWithEmail} from "~/composables/useAuth";
+
 
 const showThird = useState('showThird', () => false);
 const textDiv = ref('Sign up');
 const swap = ref(true);
+const username = ref('');
+const email = ref('');
+const password1 = ref('');
+const conpass = ref('');
+const error = ref('')
+
+
+const register = () => {
+  if (password1.value !== conpass.value) {
+    error.value = 'Your password doesnt match';
+    return(error);
+  }
+  error.value='';
+}
+//const postRegisterForm = async function () {
+//  await registerWithEmail(username.value, email.value,password1.value)
+//}
 
 const toggleColumns = () => {
   showThird.value = !showThird.value;
@@ -108,9 +127,7 @@ const toggleColumns = () => {
 return {showThird,textDiv};
 };
 
-const Loginbtn = () =>{
 
-}
 </script>
 
 
@@ -178,6 +195,8 @@ const Loginbtn = () =>{
   opacity: 1; /* Fade in the third column */
   pointer-events: all; /* Enable interactions when visible */
 }
+
+
 .sign-up{
   opacity:1;
 }
