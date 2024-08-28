@@ -127,6 +127,9 @@ const toggleColumns = () => {
 return {showThird,textDiv};
 };
 
+definePageMeta({
+    layout: 'login'
+})
 
 </script>
 
